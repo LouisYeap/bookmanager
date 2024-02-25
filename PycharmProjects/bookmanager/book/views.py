@@ -9,4 +9,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('ok')
+    # render：渲染
+    context = {
+        'name': "Give you  a gift when you click me "
+    }
+    return render(request, 'book/index.html', context=context)
